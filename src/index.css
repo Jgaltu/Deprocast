@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+*:focus {
+  outline: none;
+}
+
+/* Enhanced Slider Styles */
+.slider-enhanced {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider-enhanced::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  border: 4px solid #0891b2;
+  cursor: grab;
+  box-shadow: 
+    0 0 0 2px rgba(8, 145, 178, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(8, 145, 178, 0.4);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.slider-enhanced::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  border-color: #06b6d4;
+  box-shadow: 
+    0 0 0 4px rgba(6, 182, 212, 0.3),
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(6, 182, 212, 0.6);
+}
+
+.slider-enhanced::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.25);
+  border-color: #0891b2;
+  box-shadow: 
+    0 0 0 6px rgba(8, 145, 178, 0.4),
+    0 16px 32px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(8, 145, 178, 0.8);
+}
+
+.slider-enhanced::-moz-range-thumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  border: 4px solid #0891b2;
+  cursor: grab;
+  box-shadow: 
+    0 0 0 2px rgba(8, 145, 178, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(8, 145, 178, 0.4);
+  transition: all 0.2s ease;
+}
+
+.slider-enhanced::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  border-color: #06b6d4;
+  box-shadow: 
+    0 0 0 4px rgba(6, 182, 212, 0.3),
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(6, 182, 212, 0.6);
+}
+
+.slider-enhanced::-moz-range-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.25);
+  border-color: #0891b2;
+  box-shadow: 
+    0 0 0 6px rgba(8, 145, 178, 0.4),
+    0 16px 32px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(8, 145, 178, 0.8);
+}
+
+/* Slider track styling */
+.slider-enhanced::-webkit-slider-track {
+  height: 24px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.slider-enhanced::-moz-range-track {
+  height: 24px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+}
+
+/* Neural network animations */
+@keyframes neural-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes synaptic-fire {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+.neural-pulse {
+  animation: neural-pulse 3s ease-in-out infinite;
+}
+
+.synaptic-fire {
+  animation: synaptic-fire 2s ease-in-out infinite;
+}
+
+/* Gradient text animations */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Scientific precision typography */
+.font-mono {
+  letter-spacing: 0.05em;
+}
+
+/* Enhanced button effects */
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Neural connection lines */
+.neural-line {
+  stroke-dasharray: 5, 5;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+/* Particle effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Progress indicators */
+.progress-bar {
+  background: linear-gradient(90deg, #00d4ff, #0ea5e9, #3b82f6);
+  background-size: 200% 100%;
+  animation: progress-flow 2s ease-in-out infinite;
+}
+
+@keyframes progress-flow {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Slider value indicator animation */
+@keyframes value-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.value-pulse {
+  animation: value-pulse 1s ease-in-out infinite;
+}
+
+/* Enhanced slider glow effect */
+@keyframes slider-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.slider-glow {
+  animation: slider-glow 2s ease-in-out infinite;
+}
